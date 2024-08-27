@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Locatários</title>
+    <link rel="stylesheet" href="./assets/css/cadastroLocatario.css">
+    <link rel="stylesheet" href="./assets/css/modais.css">
+</head>
+<body>
+    <header>
+        <div class="user">
+            <img src="/assets/img/user.png" alt="User Icon" height="40" />
+            <span>
+                <p>Olá, Usuário</p>
+                <p>usuario@gmail.com</p>
+                <a class="sair" href="./index.html">Sair</a>
+            </span>
+        </div>
+        <h1>Cadastro de Locatários</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li>
+                    <img src="assets/img/dash_icon.png" alt="Report Icon" height="25" />
+                    <a href="./Dashboard.html">Relatório</a>
+                </li>
+                <li>
+                    <img src="assets/img/user_icon.png" alt="User Icon" height="25" />
+                    <a href="./cadastroUsuario.html">Cadastro de Usuário</a>
+                </li>
+                <li class="active">
+                    <img src="assets/img/cadlocatario_icon.png" alt="House Icon" height="25" />
+                    <a href="./cadastroLocatario.html">Cadastro de Locatários</a>
+                </li>
+                <li>
+                    <img src="assets/img/editoracad_icon.png" alt="Book Icon" height="25" />
+                    <a href="./cadastroEditora.html">Cadastro de Editoras</a>
+                </li>
+                <li>
+                    <img src="assets/img/cadlivro_icon.png" alt="Book Icon" height="25" />
+                    <a href="./cadastroLivro.html">Cadastro de Livros</a>
+                </li>
+                <li>
+                    <img src="assets/img/regaluguel_icon.png" alt="Money Icon" height="25" />
+                    <a href="./cadastroAlugueis.html">Controle de Aluguéis</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="content">
+            <section class="user-search">
+                <input id="searchInput" onkeyup="searchLocararios()" type="text" placeholder="Nome do Locatários">
+                <button>🔍</button>
+            </section>
+        
+            <section class="user-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listagem">
+                        <tr>
+                            <td>Ana Silva</td>
+                            <td>ana.silva@example.com</td>
+                            <td>(85) 9999-0001</td>
+                            <td>
+                                <button>✏️</button>
+                                <button>🗑️</button>
+                                <button>🔍</button>
+                            </td>
+                        </tr>
+                        <!-- Outros usuários podem ser adicionados aqui -->
+                    </tbody>
+                </table>
+                <button onclick="openModal()" class="add-user">Cadastrar novo Locatário</button>
+            </section>
+        </main>
+    </div>
+
+     <!-- AQUI FICAM OS MODAIS -->
+    <!-- Modal de Cadastro -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Cadastrar Usuário</h2>
+          <form id="userForm">
+            <!-- Nome -->
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Informe o nome" name="name" required> <br>
+                <span>* Campo obrigatório</span>
+            </div>
+            
+            <!-- E-mail -->
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Informe o email" name="email" required> <br>
+                <span>* Campo obrigatório</span>
+            </div>
+            
+            <!-- Telefone -->
+            <div class="input-group">
+                <input type="tel" id="tel" placeholder="Informe o telefone" name="tel" required> <br>
+                <span>* Campo obrigatório</span>
+            </div>      
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+  
+    <!-- Modal de Notificação -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content notification">
+            <span class="close close-notification" onclick="closeNotificationModal()">&times;</span>
+            <div id="notificationMessage">
+              
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/cadastroLocatario.js"></script>
+</body>
+</html>

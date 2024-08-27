@@ -1,0 +1,119 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background-color: #016161;
+
+  color: white;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+form .input-group input {
+  width: 450px;
+  padding: 8px;
+  font-size: 18px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+form .input-group span {
+  font-size: 12px;
+}
+
+.modal-content button {
+  color: black;
+  background-color: rgb(78, 206, 163);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.tipo-usuario {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  text-align: left;
+}
+
+.tipo-usuario label {
+  font-weight: bold;
+}
+
+.tipo-usuario .input-radio label {
+  font-weight: normal;
+}
+
+
+#notificationMessage {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+.notification {
+  background-color: #f3f3f3;
+}
+
+.close-notification {
+  color: #000;
+}
+.success {
+  font-size: 20px;
+  font-weight: bold;
+  color: #016161;
+}
+
+.success p {
+  margin-top: 20px;
+}
+
+.success img {
+  width: 96px;
+  height: 96px;
+}
+
+.unsuccess {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9b0000;
+}
+
+.unsuccess img {
+  width: 96px;
+  height: 96px;
+}

@@ -1,0 +1,75 @@
+@import './elements.css';
+.user-search {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.user-search {
+    width: 80%;
+}
+
+.user-search input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.user-search button {
+    padding: 10px;
+    border: 1px solid #30706b;
+    background-color: #30706b;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.user-list {
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid #000 2px;
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-list table thead th {
+    text-align: left;
+    padding: 10px;
+    background-color: #e9e9e9;
+}
+
+.user-list table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.user-list table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.user-list .add-user {
+    padding: 10px 20px;
+    background-color: #30706b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-list .add-user:hover {
+    background-color: #1c4c49;
+}

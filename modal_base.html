@@ -1,0 +1,50 @@
+ <!-- AQUI FICAM OS MODAIS -->
+    <!-- Modal de Cadastro -->
+    <div id="userModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Cadastrar Usuário</h2>
+        <form id="userForm">
+          <!-- Nome -->
+          <div class="input-group">
+              <input type="text" id="name" placeholder="Informe o nome" name="name" required> <br>
+              <span>* Campo obrigatório</span>
+          </div>
+          
+          <!-- E-mail -->
+          <div class="input-group">
+              <input type="email" id="email" placeholder="Informe o email" name="email" required> <br>
+              <span>* Campo obrigatório</span>
+          </div>
+          
+          <!-- Senha -->
+          <div class="input-group">
+              <input type="password" id="password" placeholder="Informe a senha" name="password" required> <br>
+              <span>* Campo obrigatório</span>
+          </div>
+    
+          <div class="tipo-usuario">
+            <label>Tipo de Usuário:</label>
+            <div class="input-radio">
+              <label for="leitor">Leitor</label>
+              <input type="radio" id="leitor" name="role" value="Leitor" checked>
+            </div>
+            <div class="input-radio">
+              <label for="editor">Editor</label>
+              <input type="radio" id="editor" name="role" value="Editor">
+            </div>
+          </div>      
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+  <!-- Modal de Notificação -->
+  <div id="notificationModal" class="modal">
+      <div class="modal-content notification">
+          <span class="close close-notification" onclick="closeNotificationModal()">&times;</span>
+          <div id="notificationMessage">
+            
+          </div>
+      </div>
+  </div>
